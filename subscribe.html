@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Elizabeth Daly -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Subscribe to the Moomin Newsletter">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+	<title>Subscribe to Moomin</title>
+    <link rel="stylesheet" href="styles/subscribe.css">
+
+</head>
+
+<body>   
+    <header>
+        <img src="images/logo.svg" alt="moomin logo">
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="index.html" >HOME</a></li>
+            <li><a href="about.html" >ABOUT</a></li>
+            <li><a href="subscribe.html" class="current">SUBSCRIBE</a></li>
+            <li><a href="creator.html">CREATOR</a></li>
+            <li><a href="quotes.html">QUOTES</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+
+        <!-- <img src="images/circle-moomin.png" alt="PurpleMoomin"/> -->
+        <h1>SUBSCRIBE TO THE MOOMIN NEWSLETTER</h1>
+        
+        <form method="post" action="confirmation.html">
+
+            <section class="personal">
+                <h2 id="personal-info">Personal Information</h2>
+                    <div class="info">
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="first-name" id="first-name" required>
+                    </div>
+                    <div class="info">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" id="last-name">
+                    </div>
+                    
+                    <div class="info">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="info">
+                        <label for="birth-date">Date of Birth</label>
+                        <input type="date" name="birth-date" id="birth-date">
+                    </div>
+            </section>
+
+            <section class="preferences">
+                <h2 id="preferences">Preferences</h2>
+                <br>
+                    <div>
+                        <label for="fav-character">Who is your favorite character? (Optional)</label>
+                    </div>
+                    <div>
+                        <select name="fav-character" id="fav-character">
+                            <option value="">(Optional)</option>
+                            <option value="Moomintroll">Moomintroll</option>
+                            <option value="Little My">Little My</option>
+                            <option value="Snufkin">Snufkin</option>
+                            <option value="Snorkmaiden">Snorkmaiden</option>
+                            <option value="Moominmamma">Moominmamma</option>
+                            <option value="Moominpappa">Moominpappa</option>
+                            <option value="Stinky">Stinky</option>
+                            <option value="Hattifatteners">Hattifatteners</option>
+                            <option value="The Groke">The Groke</option>
+                            <option value="Sniff">Sniff</option>
+                        </select>
+                    </div>
+                    <br>
+                    <fieldset name="interests" class="content-pref">
+                        <div>
+                            <label>What type of content are you interested in? (Optional)</label>
+                        </div>
+                        <ul>
+                            <li>
+                                <label for="q1-a1">
+                                    <input type="radio" id="q1-a1" name="interests a1" value="shopping">
+                                    Products and Sales
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q1-a2">
+                                    <input type="radio" id="q1-a2" name="interests a2" value="facts">
+                                     Character Facts
+                                </label>
+                            </li>
+                            <li>
+                                <label for="q1-a3">
+                                    <input type="radio" id="q1-a3" name="interests a3" value="news">
+                                    Recent News
+                                </label>
+                                
+                            </li>
+                          </ul>
+                    </fieldset>
+            </section>
+
+            <section class="other">
+                <h2>Other</h2>
+                <div>
+                    <br>
+                    <label class="info" for="subscribeNews">Recieve emails for exclusive Moomin news and events</label>
+                    <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" checked>
+                </div>
+            </section>
+
+
+
+            <div class="center">
+                <button type="submit">SUBMIT</button>
+                <script>
+                    //Event listener for clicking button
+                    let button = document.querySelectorAll('button');
+
+                    button.forEach((element) => {
+                        element.addEventListener("click", function() {
+                            alert("Are you sure you would like to submit?");
+                        });
+                    });
+                </script>
+            </div>
+        </form>
+
+
+    </main>
+
+
+    <footer>
+        <p>Website made by Elizabeth Daly
+            <br>
+        Copyright &copy; Moomin Characters Oy owns full rights to all texts and images.</p>
+    </footer>
+</body>
+
+</html>
