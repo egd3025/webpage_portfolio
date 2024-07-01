@@ -1,0 +1,178 @@
+/* Elizabeth Daly */
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+    color:rgb(18, 62, 97);
+    font-weight: 600;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {   
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+header img{
+    max-height: 2.1875rem;
+    padding-top: 1.7rem;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: right;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+}
+li {
+    float: left;
+    font-size: small;
+}
+li a {
+    display: block;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    color:rgb(18, 62, 97);
+}
+li a:hover, li a:focus {
+    background-color: #fff064;
+}
+
+.current{
+    color: rgb(26, 138, 230);;
+}
+
+/* start of page content */
+main h2{
+    color: white;
+    font-size:xx-large;
+    margin-top: 0;
+}
+main h3{
+    font-size:x-large;
+}
+main p{
+    font-size: large;
+}
+section div{
+    padding: 1.5625rem 2%;
+    vertical-align:middle;
+}
+.image{
+    padding: 1.5625rem;
+    flex-basis:content;
+    max-width: 550px;
+}
+.box{
+    display: flex;
+    width: 100%;
+    padding: 1.875rem 0;
+    height: 100%;
+    justify-content: space-around;
+}
+.tinybox{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tinyimage{
+    width: 10%;
+}
+#reverse{
+    flex-direction: row-reverse;
+}
+#intro{
+    background-color: #95e4e8;
+    max-height: 100%;
+}
+#sect1{
+    background-color: #17a2b8;
+}
+#sect2{
+    background-color: #073f1e;
+}
+#sect3{
+    background-color: #6ecc94;
+}
+#sect4{
+    background-color: #f5b3c3;
+}
+
+.astyle{
+    text-align: center;
+    background-color: #fff064;
+    padding: 10px;
+    color: black;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    font-size: medium;
+    margin-right: 20px;
+}
+
+/* end of page content */
+footer{
+    text-align: center;
+    position: absolute;
+    /* bottom: 0; */
+    width: 100%;
+    background-color: #8ed1fc;
+}
+
+
+@media only screen and (max-width: 940px) {
+    .box, .tinybox , #reverse{
+      flex-direction: column;
+    }
+  }
+
+@media only screen and (max-width: 660px) {
+    .tinyimage{
+      width: 30%;
+    }
+  }
+
+@media only screen and (max-width: 411px) {
+    li{
+        font-size: x-small;
+    }
+  }
+
+/* override styles when printing */
+@media print {
+
+    body {
+      margin: 0;
+      color: #000;
+      background-color: #fff;
+    }
+    .image{
+        padding: 0;
+        margin: 0;
+        min-height: 10rem;
+        max-height: 13rem;
+    }
+    main h2{
+        font-size: large;
+    }
+    .tinyimage{
+        visibility: hidden;
+    }
+  }
+

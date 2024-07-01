@@ -30,24 +30,44 @@ nav{
     display: flex;
     justify-content: right;
 }
-ul {
+nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
     list-style-type: none;
 }
-li {
+ol{
+    padding: 1.5625rem 2%;
+}
+ol li {
+    font-size: x-large;
+    text-align:left;
+}
+ol ul li{
+    font-size: medium;
+    list-style-type:disc;
+}
+ol ul li a{
+    text-decoration: none;
+    color:rgb(18, 62, 97);
+}
+ol ul li a:hover, ol ul li a:focus{
+    text-decoration:underline;
+}
+
+nav ul li {
     float: left;
     font-size: small;
 }
-li a {
+
+nav ul li a {
     display: block;
     text-align: center;
     padding: 5px 16px;
     text-decoration: none;
     color:rgb(18, 62, 97);
 }
-li a:hover, li a:focus {
+nav ul li a:hover, nav ul li a:focus {
     background-color: #fff064;
 }
 
@@ -83,6 +103,7 @@ section div{
     height: 100%;
     justify-content: space-around;
 }
+
 .tinybox{
     display: flex;
     width: 100%;
